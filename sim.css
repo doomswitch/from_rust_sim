@@ -1,0 +1,19 @@
+body {
+	background-color: lightblue;
+}
+
+#inputData {
+	width: 500px;
+	float: left;
+	/*border-style: solid;
+	border-width: 0px 2px 2px 0px;*/
+}
+
+#results {
+	margin-left: 510px;
+}
+
+#monsterContainer, #characterContainer {
+	border-style: solid;
+	border-width: 2px;
+}

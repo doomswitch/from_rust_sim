@@ -1,0 +1,63 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="sim.css">
+<script src="sim.js"></script>
+</head>
+
+<body>
+	<div id="inputData">
+		<u>Global Settings</u><br />
+		Injury Penalties: <input type="checkbox" id="injuryPenalties" checked="true" /><br />
+		Number of Simulations: <input type="text" id="numSims" value=1000 /><br />
+		<br /><br />
+		<u>Monster Settings</u><br />
+		<button id="addMonster" onclick="addMonster()">Add Monster</button>
+		<div id="monsterContainer">
+			<div id="monsterStats0">
+				Health: <input type="text" id="monsterHealth0" value=3 />Action: <select id="monsterAction0">
+					<option value=1>Injure Random</option>
+					<option value=2>Injure All</option>
+					<option value=3>Heal 10</option>
+					<option value=4>Dodge (1)</option>
+				</select><button onclick="removeMonster(0)">Remove</button><br />
+			</div>
+		</div>
+		<br />
+		<u>Party Settings</u><br />
+		Number of Characters:
+		<select id="partySize" onchange="changePartySize()">
+			<option value=1>1</option>
+			<option value=2>2</option>
+			<option value=3>3</option>
+			<option value=4>4</option>
+		</select>
+		<div id="characterContainer">
+			<div id="char0">
+				Character 1<br />
+				CP: <input type="text" id="cp0" value=2 /><br />
+				<!-- PC Speed: <input type="text" id="pcSpeed" value=3 /><br /> -->
+				HP: <input type="text" id="inj0" value=3 /><br />
+				<!-- Monster Speed: <input type="text" id="monsterSpeed" value=1 /><br /> -->
+			</div>
+			<div id="char1" style="display: none;">
+				Character 2<br />
+				CP: <input type="text" id="cp1" value=2 /><br />
+				HP: <input type="text" id="inj1" value=3 /><br />
+			</div>
+			<div id="char2" style="display: none;">
+				Character 3<br />
+				CP: <input type="text" id="cp2" value=2 /><br />
+				HP: <input type="text" id="inj2" value=3 /><br />
+			</div>
+			<div id="char3" style="display: none;">
+				Character 4<br />
+				CP: <input type="text" id="cp3" value=2 /><br />
+				HP: <input type="text" id="inj3" value=3 /><br />
+			</div>
+		</div>
+		<button id="run" onclick="runSims()">Run</button>
+	</div>
+	<div id="results">Result:
+		<div id="result"></div>
+	</div>
+</html>
